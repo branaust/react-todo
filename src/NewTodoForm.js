@@ -15,14 +15,14 @@ class NewTodoForm extends Component {
     handleAdd = (evt) => {
         evt.preventDefault()
         const newTodo = { ...this.state, id: uuid() }
-        this.props.addItem(newTodo)
+        this.props.addTodo(newTodo)
         this.setState({ task: '' })
     }
 
     render() {
         return (
             <div>
-                <form className="NewTodoForm" onSubmit={this.handleSubmit}>
+                <form className="NewTodoForm" onSubmit={this.handleAdd}>
                     <label htmlFor='task'>New Todo</label>
                     <input
                         id="task"
