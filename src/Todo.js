@@ -2,14 +2,14 @@ import React, { Component } from 'react'
 
 class Todo extends Component {
 
-    constructor(props) {
-
-    }
-
 
     render() {
         return (
-            <div>TODO</div>
+            <div>
+                <button>Edit</button>
+                <button>X</button>
+                <li>{this.props.task}</li>
+            </div>
         )
     }
 }
